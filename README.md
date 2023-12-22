@@ -19,4 +19,6 @@ Set up a PostgreSQL database and update the database configuration in the projec
 Run the application using npm start.
 Access the application through the provided URL.
 Start managing your tasks effortlessly!
+
+
 Feel free to customize and enhance TaskMaster based on your specific needs. Your contributions and feedback are welcome to make this project even more robust and feature-rich.
