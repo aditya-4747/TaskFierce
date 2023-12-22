@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TaskFierce</title>
+    <link rel="stylesheet" href="styles/main.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Grenze&family=Signika+Negative&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="heading x-center">
+        <h1>TaskFierce</h1>
+    </div>
+    <div class="x-center"><h1 class="date">Today</h1></div>
+
+    <div class="tasks x-center">
+        <div class="to-do container">
+            <% if(locals.taskName) { %>
+                <% for(let item of taskName) { %>
+                <div class="to-do-task">
+                    <form action="/delete" method="post">
+                        <input class="check" type="checkbox" name="taskDone" value="<%= item.id %>" onchange="this.form.submit()">
+                    </form>
+                    <p id="count<%= item.id %>" class="task-description">
+                        <%= item.task %>
+                    </p>
+
+                    <form action="/edit" method="post">
+                        <input type="hidden" name="updatedTaskId" value="<%= item.id %>">
+                        <input id="task<%= item.id %>" name="updatedTask" value="<%= item.task %>" class="input-edit-txt" type="text" hidden="true">
+                        <img src="/assets/icons/pencil-solid.svg" alt="edit button" id="edit<%= item.id %>" class="edit-btn" onclick="editTask('<%= item.id %>')">
+                        <button type="submit" id="check<%= item.id %>" class="edit-btn" hidden="true"><img height="20px" src="/assets/icons/check-solid.svg" alt="check button"></button>
+                    </form>
+                </div>
+                <hr noshade>
+                <% } %>
+            <% } %>
+            <form class="new-item-form" action="/add" method="post">
+                <input id="input-main-txt" name="taskValue" type="text" placeholder="New Task" autofocus>
+                <button class="submit-btn x-center" type="submit">+</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        function editTask(id){
+            document.getElementById('count'+ id).setAttribute("hidden",true);
+            document.getElementById('edit' + id).setAttribute("hidden",true);
+            document.getElementById('task' + id).removeAttribute("hidden");
+            document.getElementById('check' + id).removeAttribute("hidden");
+        }
+    </script>
+</body>
+</html>
