@@ -36,6 +36,6 @@ TaskFierce is a robust to-do list application built with Node.js, Express.js, EJ
 
 Start managing your tasks effortlessly!
 
-Feel free to customize and enhance TaskMaster based on your specific needs. Your contributions and feedback are welcome to make this project even more robust and feature-rich.
+Feel free to customize and enhance TaskFierce based on your specific needs. Your contributions and feedback are welcome to make this project even more robust and feature-rich.
 
-****Happy Coding !**** 🚀
+**Happy Coding !** 🚀
