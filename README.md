@@ -1,23 +1,33 @@
 # TaskFierce
 
 **Description**:
+
 TaskFierce is a robust to-do list application built with Node.js, Express.js, EJS, and PostgreSQL. It provides a seamless and user-friendly experience for managing tasks, allowing users to create, edit, and mark tasks as completed. The application's backend is powered by Express.js, which communicates with a PostgreSQL database to store and retrieve task data efficiently.
 
 **Key Features**:
 
 User-Friendly Interface: An intuitive and responsive web interface for seamless task management.
+
 Database Integration: Utilizes PostgreSQL as the backend database for secure and efficient data storage.
+
 CRUD Operations: Enables users to Create, Read, Update, and Delete tasks effortlessly.
+
 Real-time Updates: Provides instant updates on task status changes without requiring page refresh.
+
 Easy Deployment: Designed for straightforward deployment, making it easy to host on platforms like Heroku or other cloud services.
 
 **Instructions for Deployment**:
 
 Clone the repository.
+
 Install dependencies using npm install.
+
 Set up a PostgreSQL database and update the database configuration in the project.
+
 Run the application using npm start.
+
 Access the application through the provided URL.
+
 Start managing your tasks effortlessly!
 
 
